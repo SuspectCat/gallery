@@ -56,6 +56,7 @@ class GalleryApp extends StatelessWidget {
       child: Builder(
         builder: (context) {
           final options = GalleryOptions.of(context);
+          // ?. 相当于 ?..
           final hasHinge = MediaQuery.of(context).hinge?.bounds != null;
           return MaterialApp(
             restorationScopeId: 'rootGallery',

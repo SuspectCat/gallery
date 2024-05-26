@@ -39,7 +39,11 @@ class GalleryApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // https://pub.dev/packages/model_binding
+    // ModelBinding是一个使用MapModel实现的Widget数据绑定框架，其最大的优点是修改数据可以自动刷新相应的Widget。
+    // 与传统的mvvm框架不同，它不需要建立和维护额外的绑定关系。它的核心思想是“获取即捆绑”，这更符合数据使用习惯。
     return ModelBinding(
+      //
       initialModel: GalleryOptions(
         themeMode: ThemeMode.system,
         textScaleFactor: systemTextScaleFactorOption,

@@ -37,13 +37,18 @@ set deviceLocale(Locale? locale) {
 
 class GalleryOptions {
   const GalleryOptions({
+    // required 表示参数是必须的
     required this.themeMode,
+    // ?表示允许变量为空
     required double? textScaleFactor,
     required this.customTextDirection,
     required Locale? locale,
     required this.timeDilation,
     required this.platform,
     required this.isTestMode,
+    //   ?? 表示if-null
+    //   expr1  ??  expr2
+    // If expr1 is non-null, returns its value; otherwise, evaluates and returns the value of expr2.
   })  : _textScaleFactor = textScaleFactor ?? 1.0,
         _locale = locale;
 
